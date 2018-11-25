@@ -19,4 +19,5 @@ Gem::Specification.new do |s|
   end
   s.add_development_dependency "bundler", "~> 1.16"
   s.add_development_dependency "rake", "~> 10.0"
+  s.add_development_dependency "test-unit", "~> 3.2"
 end
