@@ -1,3 +1,3 @@
-module Clamrb
+class Clamrb
   VERSION = "0.0.2"
 end

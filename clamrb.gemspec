@@ -14,9 +14,8 @@ Gem::Specification.new do |s|
   s.extensions    = ['ext/clamrb/extconf.rb']
   s.homepage      = 'https://github.com/abedra/clamrb'
   s.require_paths = ["lib"]
-  s.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
-    `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  end
+  s.files         = %x{git ls-files}.split("\n").reject {|file| file =~ /^(test)/ }
+  s.test_files    = %x{git ls-files}.split("\n").select {|file| file =~ /^(test)/ }
   s.add_dependency "rake-compiler", "~> 1.0"
   s.add_development_dependency "bundler", "~> 1.16"
   s.add_development_dependency "rake", "~> 10.0"
