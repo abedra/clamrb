@@ -1,0 +1,27 @@
+PATH
+  remote: .
+  specs:
+    clamrb (0.0.2)
+      rake-compiler (~> 1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    power_assert (1.1.3)
+    rake (10.5.0)
+    rake-compiler (1.0.5)
+      rake
+    test-unit (3.2.8)
+      power_assert
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.16)
+  clamrb!
+  rake (~> 10.0)
+  test-unit (~> 3.2)
+
+BUNDLED WITH
+   1.16.6

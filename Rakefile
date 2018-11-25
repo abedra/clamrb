@@ -1,27 +1,17 @@
 require 'bundler/gem_tasks'
+require 'rake/extensiontask'
 require 'rake/testtask'
 require 'rake/clean'
 require 'rbconfig'
 require 'fileutils'
 
-EXT = RbConfig::CONFIG['DLEXT']
-
-file "lib/clamrb/clamrb.#{EXT}" => Dir.glob('ext/clamrb/*.c') do
-  Dir.chdir('ext/clamrb') do
-    ruby "extconf.rb"
-    sh "make"
-  end
-  FileUtils.mkdir_p('lib/clamrb')
-  cp "ext/clamrb/clamrb.#{EXT}", "lib/clamrb/clamrb.#{EXT}"
+Rake::ExtensionTask.new("clamrb") do |extension|
+  extension.lib_dir = 'lib/clamrb'
 end
 
-task :test => "lib/clamrb/clamrb.#{EXT}"
+task :build => [:clean, :compile]
 
-CLEAN.include("ext/**/*{.o,.log,.#{EXT}")
-CLEAN.include('ext/**/Makefile')
-CLEAN.include("lib/**/*.#{EXT}")
-
-Rake::TestTask.new do |t|
+Rake::TestTask.new(:test => :build) do |t|
   t.test_files = Dir['**/*_test.rb'].reject do |path|
     path.include?('vendor')
   end
