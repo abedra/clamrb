@@ -1,4 +1,4 @@
-# clamrb [![Build Status](https://secure.travis-ci.org/abedra/clamrb.png)](http://travis-ci.org/abedra/clamrb?branch=master) ![](https://ruby-gem-downloads-badge.herokuapp.com/clamrb) [![Gem Version](https://badge.fury.io/rb/clamrb.svg)](https://badge.fury.io/rb/clamrb)
+# clamrb [![Build Status](https://secure.travis-ci.org/abedra/clamrb.png)](http://travis-ci.org/abedra/clamrb?branch=master) ![Gem](https://img.shields.io/gem/dt/clamrb.svg) [![Gem Version](https://badge.fury.io/rb/clamrb.svg)](https://badge.fury.io/rb/clamrb)
 
 This project is a Ruby gem that interfaces with the Clam AV engine using libclamav.
 
