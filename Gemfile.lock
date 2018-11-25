@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    clamrb (0.0.2)
+    clamrb (0.0.3)
       rake-compiler (~> 1.0)
 
 GEM
