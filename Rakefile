@@ -22,7 +22,9 @@ CLEAN.include('ext/**/Makefile')
 CLEAN.include("lib/**/*.#{EXT}")
 
 Rake::TestTask.new do |t|
-  t.libs << 'test'
+  t.test_files = Dir['**/*_test.rb'].reject do |path|
+    path.include?('vendor')
+  end
 end
 
 task :default => :test
