@@ -1,5 +1,5 @@
 require 'test/unit'
-require 'clamrb'
+require_relative '../lib/clamrb'
 
 class ClamrbTest < Test::Unit::TestCase
   @@clamrb = Clamrb.new
