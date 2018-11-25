@@ -7,5 +7,5 @@ rvm:
   - 2.4
   - 2.5
 before_install:
-  sudo apt-get install gcc make pkg-config clamav libclamav-dev freshclam
+  sudo apt-get install gcc make pkg-config clamav libclamav-dev clamav-freshclam
   freshclam
