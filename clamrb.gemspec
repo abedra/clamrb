@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.files         = %x{git ls-files}.split("\n").reject {|file| file =~ /^(test)/ }
   s.test_files    = %x{git ls-files}.split("\n").select {|file| file =~ /^(test)/ }
   s.add_dependency "rake-compiler", "~> 1.0"
-  s.add_development_dependency "bundler", "~> 1.16"
-  s.add_development_dependency "rake", "~> 10.0"
+  s.add_development_dependency "bundler", "~> 2.1.4"
+  s.add_development_dependency "rake", ">= 12.3.3"
   s.add_development_dependency "test-unit", "~> 3.2"
 end
