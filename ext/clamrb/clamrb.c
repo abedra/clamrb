@@ -33,7 +33,7 @@ VALUE scan(VALUE self, VALUE filename)
   Data_Get_Struct(self, struct cl_engine, engine);
   const char *name = NULL;
   long unsigned int scanned = 0;
-  int ret = cl_scanfile(StringValueCStr(filename), &name, &scanned, engine, CL_SCAN_STDOPT);
+  int ret = cl_scanfile(StringValueCStr(filename), &name, &scanned, engine, CL_DB_STDOPT);
 
   VALUE clamrb = rb_const_get(rb_cObject, rb_intern("Clamrb"));
   VALUE clamrb_result = rb_const_get(clamrb, rb_intern("Result"));

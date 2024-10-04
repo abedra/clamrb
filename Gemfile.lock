@@ -18,7 +18,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler
+  bundler (~> 2.1.4)
   clamrb!
   rake (>= 12.3.3)
   test-unit (~> 3.2)
