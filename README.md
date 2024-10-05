@@ -1,5 +1,4 @@
-# clamrb [![Build Status](https://secure.travis-ci.org/abedra/clamrb.png)](http://travis-ci.org/abedra/clamrb?branch=master) ![Gem](https://img.shields.io/gem/dt/clamrb.svg) [![Gem Version](http://img.shields.io/gem/v/clamrb.svg)](https://rubygems.org/gems/clamrb)
-
+# clamrb ![Gem](https://img.shields.io/gem/dt/clamrb.svg) [![Gem Version](http://img.shields.io/gem/v/clamrb.svg)](https://rubygems.org/gems/clamrb)
 
 This project is a Ruby gem that interfaces with the Clam AV engine using libclamav.
 
@@ -13,11 +12,11 @@ gem 'clamrb'
 
 And then execute:
 
-    $ bundle
+    bundle
 
 Or install it yourself as:
 
-    $ gem install foo
+    gem install foo
 
 ## Usage
 
@@ -50,4 +49,4 @@ This gem does not have any ruby dependencies, however, it does rely on some exte
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/abedra/clamrb.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/abedra/clamrb>.
