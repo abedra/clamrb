@@ -21,7 +21,7 @@ class ClamrbTest < Test::Unit::TestCase
   def test_infected_file
     result = @@clamrb.scan "test/files/eicar.txt"
     assert_equal(:infected, result.status)
-    assert_equal("Eicar-Test-Signature", result.identifier)
+    assert_equal("Eicar-Signature", result.identifier)
     assert_true(result.virus?)
   end
 end

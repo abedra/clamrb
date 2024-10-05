@@ -5,7 +5,7 @@ require "clamrb/version"
 Gem::Specification.new do |s|
   s.name          = 'clamrb'
   s.version       = Clamrb::VERSION
-  s.date          = '2018-11-23'
+  s.date          = '2024-10-04'
   s.licenses      = ['MIT']
   s.summary       = 'Ruby interface to Clam AV'
   s.description   = 'Native Ruby extension for running clamav scans'
@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.files         = %x{git ls-files}.split("\n").reject {|file| file =~ /^(test)/ }
   s.test_files    = %x{git ls-files}.split("\n").select {|file| file =~ /^(test)/ }
   s.add_dependency "rake-compiler", "~> 1.0"
-  s.add_development_dependency "bundler", "~> 2.1.4"
+  s.add_development_dependency "bundler", "~> 2.5"
   s.add_development_dependency "rake", ">= 12.3.3"
   s.add_development_dependency "test-unit", "~> 3.2"
 end

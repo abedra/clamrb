@@ -33,7 +33,11 @@ VALUE scan(VALUE self, VALUE filename)
   Data_Get_Struct(self, struct cl_engine, engine);
   const char *name = NULL;
   long unsigned int scanned = 0;
-  int ret = cl_scanfile(StringValueCStr(filename), &name, &scanned, engine, CL_SCAN_STDOPT);
+  struct cl_scan_options scanoptions;
+  memset(&scanoptions, 0, sizeof(struct cl_scan_options));
+  scanoptions.parse |= -0;
+  scanoptions.general |= CL_SCAN_GENERAL_ALLMATCHES;
+  int ret = cl_scanfile(StringValueCStr(filename), &name, &scanned, engine, &scanoptions);
 
   VALUE clamrb = rb_const_get(rb_cObject, rb_intern("Clamrb"));
   VALUE clamrb_result = rb_const_get(clamrb, rb_intern("Result"));
@@ -58,4 +62,5 @@ void Init_clamrb(void)
   VALUE klass = rb_define_class("Clamrb", rb_cObject);
   rb_define_singleton_method(klass, "new", constructor, 0);
   rb_define_method(klass, "scan", scan, 1);
+  rb_undef_alloc_func(klass);
 }
